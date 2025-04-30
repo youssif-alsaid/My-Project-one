@@ -1,0 +1,500 @@
+
+/* Start Variables */
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+  }
+  /* End Variables */
+
+html {
+    scroll-behavior: smooth;
+}
+/* Start Global Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+    font-family: "work sans", sans-serif;
+}
+
+
+/* End Global Rules */
+
+/* Start nav home section */
+
+nav{
+padding: 20px;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .logo{
+    width: 60px;
+}
+
+nav .container .icon{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+    justify-content: flex-end;
+
+
+}
+
+nav .container .icon:hover span:nth-child(2){
+    width: 100%;
+}
+
+nav .container .links {
+    position: relative;
+}
+
+nav .container .icon span{
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 5px;
+}
+
+nav .container .icon span:first-child{
+    width: 100%;
+}
+
+nav .container .icon span:nth-child(2){
+    width: 60%;
+    transition: 0.3s ease;
+}
+
+nav .container .icon span:last-child{
+    width: 100%;
+}
+
+nav .container .links ul{
+    display: none;
+    list-style: none;
+    background-color: #f6f6ff;
+    min-width: 200px;
+    position: absolute;
+    top: calc(100% + 20px);
+    right: 0;
+    border-radius: 7px;
+}
+
+nav .container .links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+
+}
+
+nav .container .links:hover ul{
+    display: block;
+}
+
+nav .container .links ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    padding-right: 20px;
+    font-size: 20px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+nav .container .links ul li a:hover {
+    margin-left: 20px;
+    color: #15cbb8;
+}
+
+
+nav .container .links ul li:not(:last-child){
+    border-bottom: 2px solid #ddd;
+}
+
+/* End nav home section */
+
+/* Start headre home section */
+
+.header-home{
+    height: 550px;
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-home h1{
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0px;
+
+}
+
+.header-home p{
+    font-size: 20px;
+    line-height: 2;
+}
+
+/* End headre home section */
+
+/* Start main home section */
+
+.main-home{
+    background-color: var(--section-background);
+}
+
+.main-card{
+    text-align: center;
+    margin-top: var(--section-padding);
+    margin-bottom: var(--section-padding);
+
+}
+.main-card i{
+    color: var(--main-color);
+    font-size: 58px;
+    margin-bottom: 26px;
+}
+
+.main-card h4{
+    font-size: 19px;
+    font-weight: 800;
+}
+.main-card p{
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+
+/* End main home section */
+
+/* Start special-heading */
+
+.special-heading{
+    text-align: center;
+    padding-bottom: var(--section-padding);
+    padding-top: var(--section-padding);
+
+}
+
+.special-heading h2{
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.special-heading p{
+    color: #797979;
+    font-size: 20px;
+    margin-top: -38px;
+}
+
+@media only screen and (max-width: 767px){
+
+    .special-heading{
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    .special-heading h2{
+        font-size: 75px;
+        font-weight: 800;
+        letter-spacing: 2px;
+
+    }
+
+    .special-heading p{
+        font-size: 16px;
+        margin-top: -25px;
+    }
+
+    }
+
+
+/* Start special-heading */
+
+/* Start services home section */
+
+.services-home{
+    padding-bottom: 100px;
+}
+
+
+.services-home .services-card{
+    display: flex;
+}
+
+.services-home .services-card i{
+    font-size: 40px;
+    color: var(--main-color);
+    padding: 5px 20px 0px 0px;
+}
+
+.services-home .services-card h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.services-home .img-services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.services-home .img-services img{
+    width: 260px;
+    /* height: 350px; */
+}
+
+
+
+.services-home .img-services::after{
+    content: "";
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 767px){
+    .services-home .services-card{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 991px){
+    .services-home .img-services{
+        display: none;
+    }
+    .services-home .services-card i{
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+    .services-home .services-card h4{
+        margin-bottom: 20px;
+    }
+}
+
+
+/* End services home section */
+
+/* Start Portfolio home section*/
+
+.Portfolio-home{
+    background-color: var(--section-background);
+    padding-bottom: 100px;
+
+}
+
+.card-portfolio{
+    margin-bottom: 30px;
+    background-color: white;
+    border: #06060629 solid 3px;
+    border-radius: 30px 0px 30px 30px;
+}
+.card-portfolio img{
+    border-radius: 30px 0px 0px 0px;
+}
+
+.card-portfolio h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.card-portfolio p{
+    padding: 0px 10px 10px 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+/* End Portfolio home section*/
+
+/* Start about home section */
+
+.about-home{
+    padding-bottom: 100px;
+    
+}
+
+.about-home img{
+    width: 220px;
+}
+
+.about-home .about-img{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.about-home .about-img::before{
+    content: "";
+    position: absolute;
+    background-color: #ebeced;
+    left: -20px;
+    width: 100px;
+    height: calc(100% + 60px);
+    top: -30px;
+    z-index: -1;
+}
+
+.about-home .about-img::after{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: calc(100% + 60px);
+    border-bottom: var(--main-color) solid 80px;
+    border-left: var(--main-color) solid 80px;
+    right: 93px;
+    z-index: -1;
+}
+
+.about-home p:nth-of-type(1){
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 2.5;
+    margin-bottom: 50px;
+}
+
+.about-home hr{
+    border: none;
+    height: 3px;
+    width: 50%;
+    margin: auto;
+    background-color: #10cab7;
+}
+
+.about-home p:nth-of-type(2){
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 1199px){
+    .about-home .about-img{
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .about-home .about-img::before , .about-home .about-img::after{
+        display: none;
+    }
+    
+}
+
+/* End about home section */
+
+
+/* Start contact home section */
+
+.contact-home{
+    background-color: var(--section-background);
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.contact-home .content h3{
+    font-weight: 900;
+    font-size: 34px;
+    color: var(--secondary-color);
+}
+
+.contact-home .content a{
+    color: var(--main-color);
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.contact-home .icon-social{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 16px;
+    margin-top: 20px;
+    color: var(--secondary-color);
+}
+
+.contact-home .icon-social p{
+    margin-right: 30px;
+}
+
+.contact-home .icon-social i{
+    margin-right: 13px;
+    margin-top: 4px;
+}
+
+@media only screen and (max-width: 767px){
+    .contact-home .content h3{
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .contact-home .content a{
+        font-size: 23px;
+        font-weight: 700;
+    }
+}
+
+
+/* End contact home section */
+
+
+
+/* Start footer home section */
+
+.footer-home{
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding-top: 27px;
+    padding-bottom: 9px;
+}
+
+.footer-home P{
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
+.footer-home span{
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* End footer home section */
